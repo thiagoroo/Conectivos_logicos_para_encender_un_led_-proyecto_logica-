@@ -1,0 +1,29 @@
+elif opcion == 4:  # Condicional
+    print("\n--- CONDICIONAL (p → q) ---")
+    p = int(input('Digite el valor de p (0 o 1): '))
+    q = int(input('Digite el valor de q (0 o 1): '))
+    if p not in (0,1) or q not in (0,1):
+        print("Valores no válidos, use 0 o 1.")
+        continue
+    resultado = (not p) or q
+    print(f'{p} → {q} = {resultado}')
+    if resultado == 1:
+        print("LED ENCENDIDO ")
+    else:
+        print("LED apagado")
+
+elif opcion == 5:  # Bicondicional
+    print("\n--- BICONDICIONAL (p ↔ q) ---")
+    p = int(input('Digite el valor de p (0 o 1): '))
+    q = int(input('Digite el valor de q (0 o 1): '))
+    if p not in (0,1) or q not in (0,1):
+        print("Valores no válidos, use 0 o 1.")
+        continue
+    resultado = (p == q)
+    resultado_int = 1 if resultado else 0
+    print(f'{p} ↔ {q} = {resultado_int}')
+    if resultado_int == 1:
+        print("LED ENCENDIDO ")
+    else:
+        print("LED apagado")
+
